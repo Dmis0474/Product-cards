@@ -11,12 +11,16 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   min-height: 100vh;
   padding: 0 20px;
-  background-image: linear-gradient(45deg, #1334d8 0%, #840c7c 50%, #e99d10 100%);
+  background-image: linear-gradient(
+    45deg,
+    #1334d8 0%,
+    #840c7c 50%,
+    #e99d10 100%
+  );
+  position: relative;
 }
 
 a {
@@ -48,6 +52,51 @@ img {
   max-width: 1230px;
   padding: 0 15px;
   margin: auto;
+  position: relative;
+}
+
+
+.card-nav {
+  cursor: pointer;
+  background: #fff;
+  padding: 13px 15px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 180px;
+  margin-right: 0;
+  margin-left: auto;
+  margin-top: 30px;
+  box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.15)
+}
+
+.icon{
+  color: #c850c0;
+}
+.fas{
+  font-size: 20px;
+}
+
+.basket{
+  font-weight: 500;
+}
+
+.item-count{
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: #c850c0;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.main{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cards {
@@ -68,62 +117,66 @@ img {
   margin-bottom: 20px;
 }
 
-.card:hover .content{
+.card:hover .card-img {
+  transform: scale(1.1);
+}
+
+.card:hover .content {
   bottom: 0px;
 }
 
-.card-img{
+.card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
-.content{
+.content {
   position: absolute;
   width: 100%;
   bottom: -50%;
   padding: 10px 20px 22px 20px;
   background-color: #fff;
   transition: all 0.3s ease;
-  box-shadow: opx -3px 10px 0px rgba(0,0,0,0.15);
+  box-shadow: opx -3px 10px 0px rgba(0, 0, 0, 0.15);
 }
 
-.row, .buttons{
+.row,
+.buttons {
   display: flex;
   justify-content: space-between;
 }
 
-
-.details-header{
+.details-header {
   display: block;
   margin-bottom: 10px;
   font-size: 22px;
   font-weight: 600;
 }
-.details__text{
+.details__text {
   color: #333;
   font-size: 14px;
   font-weight: 400;
   /* max-width: 80%; */
 }
 
-.price{
+.price {
   color: #c850c0;
   font-size: 15px;
   font-weight: 600;
   min-width: 20%;
 }
 
-.buttons{
-  margin-top: 20px; 
- 
+.buttons {
+  margin-top: 20px;
 }
 
 .card-button {
   width: 100%;
   padding: 10px 0;
-  border: 2px solid  #c850c0;
+  border: 2px solid #c850c0;
   border-radius: 3px;
   font-size: 17px;
   font-weight: 500;
@@ -133,24 +186,24 @@ img {
   transition: all 0.3s ease;
 }
 
-.card-button-one{
+.card-button-one {
   margin-right: 20px;
   color: #c850c0;
   background-color: #fff;
 }
 
-.card-button-one:hover{
+.card-button-one:hover {
   color: #fff;
   background-color: #333;
 }
 
-.card-button-two{
+.card-button-two {
   margin-right: 10px;
   color: #fff;
   background-color: #c850c0;
 }
 
-.card-button-two:hover{
+.card-button-two:hover {
   background: #fa8bff;
-  border-color: #fa8bff;;
+  border-color: #fa8bff;
 }
